@@ -8,7 +8,6 @@ import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Home from "./pages/Home";
 import "./App.css"; 
-//import './styles/tailwind.css';
 
 const App = () => {
   return (

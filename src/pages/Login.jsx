@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api";
-import "./Login.css"; 
 import HowardLogo from "../assets/howardlogo.png";
 
 const Login = () => {
@@ -22,24 +21,24 @@ const Login = () => {
   };
 
   return (
-    <div className="register-container">
-      <div className="register-box">
+    <div className="flex justify-center items-center min-h-screen bg-background-color">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
         {/* Logo */}
-        <div className="logo-container">
-          <img src={HowardLogo} alt="University Logo" className="logo" />
+        <div className="flex justify-center mb-6">
+          <img src={HowardLogo} alt="University Logo" className="h-12 w-12" />
         </div>
 
         {/* Page Title */}
-        <h2 className="login-title">Login</h2>
+        <h2 className="text-center text-3xl font-bold text-primary mb-6">Login</h2>
 
         {/* Error Message */}
-        {error && <div className="error-message">{error}</div>}
+        {error && <div className="text-center text-sm text-secondary mb-4">{error}</div>}
 
         {/* Login Form */}
-        <form onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Email Input */}
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium text-muted">Email</label>
             <input
               type="email"
               id="email"
@@ -47,12 +46,13 @@ const Login = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
           {/* Password Input */}
-          <div className="input-group">
-            <label htmlFor="password">Password</label>
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium text-muted">Password</label>
             <input
               type="password"
               id="password"
@@ -60,16 +60,24 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
           {/* Submit Button */}
-          <button type="submit" className="login-button">Login</button>
+          <button
+            type="submit"
+            className="w-full py-3 bg-primary text-white font-medium rounded-md hover:bg-hover-color focus:outline-none focus:ring-2 focus:ring-secondary"
+          >
+            Login
+          </button>
         </form>
 
         {/* Forgot Password */}
-        <div className="forgot-password">
-          <a href="/forgot-password">Forgot Password?</a>
+        <div className="text-center mt-4">
+          <a href="/forgot-password" className="text-sm text-muted hover:text-secondary">
+            Forgot Password?
+          </a>
         </div>
       </div>
     </div>

@@ -1,10 +1,13 @@
 import React from "react";
-import "./Footer.css"; // Import external CSS file
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} MBA Course Tracker. All rights reserved.</p>
+    <footer className="bg-primary text-accent py-4 mt-8">
+      <div className="max-w-7xl mx-auto text-center">
+        <p className="text-sm">
+          &copy; {new Date().getFullYear()} MBA Course Tracker. All rights reserved.
+        </p>
+      </div>
     </footer>
   );
 };

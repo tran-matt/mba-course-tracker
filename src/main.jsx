@@ -1,8 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css"; // Ensure this includes global styles
-import "./App.css";   // Import app-specific styles
+import "./index.css"; 
+import "./App.css";   
 import App from "./App.jsx";
+import '../src/index.css';
+import '../tailwind.css';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

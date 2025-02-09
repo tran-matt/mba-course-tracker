@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import API from "../api";
-import "./Register.css"; // Import external CSS file
 
 const Register = () => {
   const [formData, setFormData] = useState({

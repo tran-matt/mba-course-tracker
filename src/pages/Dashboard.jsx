@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./Dashboard.css"; // Import external CSS file
 
 const Dashboard = () => {
   const [student, setStudent] = useState(null);
